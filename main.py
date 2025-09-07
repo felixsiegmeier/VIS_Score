@@ -1,7 +1,8 @@
 import streamlit as st
 
 st.set_page_config(page_title="VIS Rechner", page_icon="🧮")
-st.title("VIS-Score Rechner")
+st.title("VIS Rechner")
+st.subtitle("Vasoactive Inotropic Score")
 
 with st.form("vis_form"):
     # Basisdaten
