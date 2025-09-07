@@ -13,6 +13,7 @@ with st.form("vis_form"):
     vaso_u_h = st.number_input("Vasopressin (U/h)", min_value=0.0, value=0.0, step=0.1, format="%.2f")
     methylenblau = st.number_input("Methylenblau (mg/kg/h)", min_value=0.0, value=0.0, step=0.01, format="%.2f")
     epi = st.number_input("Epinephrin (µg/kg/min)", min_value=0.0, value=0.0, step=0.01, format="%.2f")
+    milrinon = st.number_input("Milrinon (µg/kg/min)", min_value=0.0, value=0.0, step=0.1, format="%.2f")
     dobutamin = st.number_input("Dobutamin (µg/kg/min)", min_value=0.0, value=0.0, step=0.1, format="%.1f")
     levosimendan = st.number_input("Levosimendan (µg/kg/min)", min_value=0.0, value=0.0, step=0.001, format="%.2f")
 
@@ -33,6 +34,7 @@ if berechnen:
         10_000.0 * vaso_u_kg_min +
         20.0 * methylenblau +
         100.0 * epi +
+        10 * milrinon +
         1.0 * dobutamin +
         50.0 * levosimendan
     )
